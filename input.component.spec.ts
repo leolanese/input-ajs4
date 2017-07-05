@@ -44,7 +44,9 @@ describe(`Checking InputComponent:`, () => {
 
 
     it(`Should create inputComponent component and input must exists :`, () => {
+      expect(InputComponent).toBeDefined();
       expect(inputComponent).toBeDefined();
+      expect(inputComponent instanceof InputComponent).toBeTruthy();
       expect(inputComponent.form.contains("inputName")).toBeTruthy();
     });
 
