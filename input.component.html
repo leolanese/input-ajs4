@@ -1,0 +1,19 @@
+<form novalidate (ngSubmit)="onSubmit(input.value)" [formGroup]="form">
+    <div class="form-group mc-field">
+        <input type="text" class="form-control" [ngClass]="typeClass"
+               [placeholder]="placeholder"
+               maxlength="{{mxlength}}"
+               [readonly]="readonly"
+               formControlName="inputName" 
+               #input />
+        <div *ngIf="isIconValue" class="input-group-btn">
+            <button class="btn btn-white mc-search-box-button" type="submit">
+                <i class="fa fa-search"></i>
+            </button>
+        </div>
+    </div>
+</form>
+
+
+
+
